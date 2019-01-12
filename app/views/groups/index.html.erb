@@ -19,8 +19,10 @@
         <td><%= group.description %></td>
         <td><%= group.user.email %></td>
         <td>
+          <% if current_user && current_user == group.user%>
           <%= link_to("编辑", edit_group_path(group), class: "btn btn-sm btn-default")%>
           <%= link_to("删除", group_path(group), class: "btn btn-sm btn-default", method: :delete, data: { confim: "Are you sure?"})%>
+          <% end %>
         </td>
       </tr>
       <% end %>
