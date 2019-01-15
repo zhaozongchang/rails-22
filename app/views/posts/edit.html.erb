@@ -1,0 +1,11 @@
+<h2 class="text-center"> 编辑文章</h2>
+
+<div class="col-md-12">
+
+
+<%= simple_form_for [@group,@post] do |f| %>
+
+<%= f.input :content %>
+<%= f.submit "Submit", disable_with: "Submiting...", class: "btn btn-primary" %>
+<% end %>
+</div>
